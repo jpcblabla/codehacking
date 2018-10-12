@@ -11,12 +11,13 @@
          <thead>
            <tr>
              <th>ID</th>
+               <th>Photo</th>
                <th>Role</th>
-                    <th>Active</th>
-                        <th>Name</th>
-                            <th>Email</th>
-                                 <th>Created</th>
-                                    <th>Updated</th>
+               <th>Active</th>
+               <th>Name</th>
+               <th>Email</th>
+               <th>Created</th>
+               <th>Updated</th>
            </tr>
          </thead>
          <tbody>
@@ -27,6 +28,7 @@
 
                  <tr>
                      <td>{{$user->id}}</td>
+                     <td><img height="50" src="{{$user->photo ? $user->photo->file : 'no user photo'}}" alt="" ></td>
                      <td>{{$user->role->name}}</td>
                      <td>{{$user->is_active == 1 ? 'Active' : 'Not Active'}}</td>
                      <td>{{$user->name}}</td>
